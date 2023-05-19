@@ -1,27 +1,59 @@
+/* eslint-disable react/jsx-key */
 
-const Gallery = () => {
-    const animalToys = [
-        { id: 1, src: 'path_to_image_1.jpg', alt: 'Animal Toy 1' },
-        { id: 2, src: 'path_to_image_2.jpg', alt: 'Animal Toy 2' },
-        { id: 2, src: 'path_to_image_2.jpg', alt: 'Animal Toy 2' },
-        { id: 2, src: 'path_to_image_2.jpg', alt: 'Animal Toy 2' },
-        { id: 2, src: 'path_to_image_2.jpg', alt: 'Animal Toy 2' },
-        { id: 3, src: 'path_to_image_3.jpg', alt: 'Animal Toy 3' },
-        // Add more image objects as needed
-      ];
-    
-      return (
-        <div className="grid justify-center items-center  grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-4">
-          {animalToys.map((toy) => (
-            <img
-              key={toy.id}
-              src={toy.src}
-              alt={toy.alt}
-              className="w-full h-full object-cover"
-            />
-          ))}
-        </div>
-      );
-};
+import './Gallery.css';
+//Install and import the library
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+
+
+function Gallery() {
+
+  //Responsiveness 
+  const responsive = {
+    0: { items: 1 },
+    568: { items: 4 },
+    1024: { items: 6 },
+  };
+
+
+  //The carousel items 
+  const items = [
+
+      // eslint-disable-next-line react/jsx-key
+      <div className="item">
+        <img src="/cat1.png" alt="cute cat" />
+      </div>,
+      <div className="item">
+        <img src="/cat2.png" alt="cute cat" />
+      </div>,
+      <div className="item">
+        <img src="/cat3.png" alt="cute cat" />
+      </div>,
+      <div className="item">
+        <img src="/cat1.png" alt="cute cat" />
+      </div>,
+      <div className="item">
+        <img src="/cat2.png" alt="cute cat" />
+      </div>,
+      
+
+
+  ];
+
+
+  return (
+    <div className="App">
+
+      <h1>Cats list</h1>
+
+      <AliceCarousel
+        mouseTracking
+        items={items}
+        responsive={responsive}
+        controlsStrategy="alternate"
+      />
+    </div>
+  );
+}
 
 export default Gallery;
