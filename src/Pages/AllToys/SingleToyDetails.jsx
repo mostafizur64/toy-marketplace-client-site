@@ -16,7 +16,6 @@ const SingleToyDetails = () => {
           <p>{rating}</p>
           <p>{description}</p>
          </div>
-         
         </div>
       </div>
     );
