@@ -16,7 +16,7 @@ const {_id,price,rating,description,quantity} = toy
         const updateToys ={  price,rating,quantity,description  }
         console.log(updateToys);
         //send data to the server
-        fetch(`http://localhost:5000/myToys/${_id}`,{
+        fetch(`https://animal-toys-server-alpha.vercel.app/myToys/${_id}`,{
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

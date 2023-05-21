@@ -47,17 +47,17 @@ import SubCategory from "../Pages/SubCategory/SubCategory";
         {
           path:'/singleToyDetails/:id',
           element:<PrivateRoute><SingleToyDetails></SingleToyDetails></PrivateRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/alltoys/${params.id}`)
+          loader:({params})=>fetch(`https://animal-toys-server-alpha.vercel.app/alltoys/${params.id}`)
         },
         {
           path:'/myToys',
           element:<PrivateRoute><MyToys></MyToys></PrivateRoute>,
-          loader:()=>fetch(`http://localhost:5000/alltoys`)
+          loader:()=>fetch(`https://animal-toys-server-alpha.vercel.app/alltoys`)
         },
         {
           path:'/updateToys/:id',
           element:<UpdateToys></UpdateToys>,
-          loader:({params})=>fetch(`http://localhost:5000/alltoys/${params.id}`)
+          loader:({params})=>fetch(`https://animal-toys-server-alpha.vercel.app/alltoys/${params.id}`)
         },
         {
           path:'/subCategory',

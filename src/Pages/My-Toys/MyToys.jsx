@@ -9,13 +9,12 @@ const MyToys = () => {
 
     const navigate = useNavigate()
     const [myToys, setMyToys] = useState([])
-    const [asc, setAsc] = useState(true);
-    const [search, setSearch] = useState('');
+  
     useTitle('My Toys')
     console.log(myToys);
     const { user } = useContext(AuthContext)
 
-    const url = `http://localhost:5000/myToys?email=${user.email}`
+    const url = `https://animal-toys-server-alpha.vercel.app/myToys?email=${user.email}`
     useEffect(() => {
         fetch(url, {
             method: 'GET',
@@ -48,7 +47,7 @@ const MyToys = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then(result => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/myToys/${id}`, {
+                fetch(`https://animal-toys-server-alpha.vercel.app/myToys/${id}`, {
                     method: 'DELETE'
                 }).then(res => res.json())
                     .then(data => {
@@ -58,8 +57,8 @@ const MyToys = () => {
                                 'Your file has been deleted.',
                                 'success',
                             )
-                            // const remaining = myToys.filter(toy=>toy._id !==_id)
-                            // setMyToys(remaining)
+                            const remaining = myToys.filter(toy=>toy._id !==id)
+                            setMyToys(remaining)
 
                         }
                     })
@@ -71,14 +70,14 @@ const MyToys = () => {
 
     }
     const hanadleAssending = () => {
-        fetch('http://localhost:5000/shortAssending')
+        fetch('https://animal-toys-server-alpha.vercel.app/shortAssending')
             .then(res => res.json())
             .then(data => {
                 setMyToys(data)
             })
     }
     const hanadleDesending = () => {
-        fetch('http://localhost:5000/shortDesending')
+        fetch('https://animal-toys-server-alpha.vercel.app/shortDesending')
             .then(res => res.json())
             .then(data => {
                 setMyToys(data)
@@ -89,7 +88,7 @@ const MyToys = () => {
         <div className="mt-4  border-2 mb-4 rounded-xl">
             <div className="overflow-x-auto w-full">
                 <th>
-                    <button onClick={hanadleAssending} className="btn btn-sm btn-outline btn-secondary">assending</button>
+                    <button onClick={hanadleAssending} className="btn btn-sm btn-outline btn-secondary">Assending</button>
                     <button onClick={hanadleDesending} className="btn btn-sm btn-outline btn-secondary">Desending</button>
                    
                 </th>

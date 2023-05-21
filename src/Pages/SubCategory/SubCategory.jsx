@@ -12,7 +12,7 @@ const SubCategory = () => {
   const [id, setId] = useState('')
 
   useEffect(() => {
-    fetch(`http://localhost:5000/alltoys`)
+    fetch(`https://animal-toys-server-alpha.vercel.app/alltoys`)
       .then(res => res.json())
       .then(data => {
         setSubCategory(data)
@@ -22,7 +22,7 @@ const SubCategory = () => {
 
   useEffect(() => {
     const newFm = async () => {
-      const res = await fetch(`http://localhost:5000/subCategory/${id}`)
+      const res = await fetch(`https://animal-toys-server-alpha.vercel.app/subCategory/${id}`)
       const data = await res.json()
       setSingleSubCategorys(data)
       setLaoding(false)

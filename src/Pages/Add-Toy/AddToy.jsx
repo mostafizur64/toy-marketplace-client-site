@@ -30,7 +30,7 @@ const AddToy = () => {
             description,
         }
         console.log(addToys);
-        fetch('http://localhost:5000/addToys',{
+        fetch('https://animal-toys-server-alpha.vercel.app/addToys',{
             method:'POST',
             headers:{
                 'content-type':'application/json',
@@ -40,7 +40,7 @@ const AddToy = () => {
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
-            if(data.insertedId){
+            if(data.insertedId ){
                 Swal.fire({
                     title: 'Success!',
                     text: 'Toys Updated successfully',

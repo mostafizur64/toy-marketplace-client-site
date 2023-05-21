@@ -10,7 +10,7 @@ const AllToys = () => {
     // const [data , setData]  =useState([])
  
     useEffect(() => {
-        fetch('http://localhost:5000/alltoys')
+        fetch('https://animal-toys-server-alpha.vercel.app/alltoys')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -19,7 +19,7 @@ const AllToys = () => {
     }, []);
 
     const handleSearchToy = () => {
-        fetch(`http://localhost:5000/getToyName/${searchText}`)
+        fetch(`https://animal-toys-server-alpha.vercel.app/getToyName/${searchText}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
