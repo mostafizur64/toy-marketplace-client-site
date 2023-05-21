@@ -16,12 +16,13 @@ const SingleSubCategoy = ({ singleSub }) => {
       return navigate(`/singleToyDetails/${_id}`)
     }
     else {
-      Swal.fire({
-        title: 'Success!',
-        text: 'Coffee Updated successfully',
-        icon: 'success',
-        confirmButtonText: 'Cool'
-      })
+     return  Swal.fire({
+      title: 'Warning!',
+      text: 'Please login first to you',
+      icon: 'danger',
+      confirmButtonText: 'Warning',
+      
+    });
     }
   }
 
