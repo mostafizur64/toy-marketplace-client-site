@@ -12,7 +12,7 @@ const CustomerTestimonials = () => {
 
                 <div  data-aos="flip-left"data-aos-delay="100" className="p-4 rounded-xl gap-3 shadow-xl mr-2">
                     <div className="flex justify-between">
-                        <div className="flex">
+                        <div className="flex"> 
                             <img className="h-20 w-20 rounded-full" src="https://i.ibb.co/B21QWks/P3-OLGJ1-copy-1.png" alt="" />
                             <div className="">
                                 <h2>Clara Haringston</h2>
@@ -31,7 +31,7 @@ const CustomerTestimonials = () => {
                         <p>Duis tristique nisl nec justo scelerisque, ut dictum magna aliquet. Class aptent taciti sociosqu ad litora
                             torquent per conubia nostra, per inceptos himenaeos. Interdum et malesuada fames ac ante ipsum primis in
                             faucibus. Nullam lectus justo, consectetur at vulputate et,
-                            dictum vel tellus. Etiam libero massa, posuere id dictum eget, sodales ac purus. Ut eu nisl sodales, euismod ipsum eget.</p>
+                            dictum vel tellus. Etiam libero massa posuere id dictum eget, sodales ac purus. Ut eu nisl sodales, euismod ipsum eget.</p>
                     </div>
                 </div>
                 <div  data-aos="flip-right"data-aos-delay="100" className="p-4 rounded-xl gap-3 shadow-xl mr-2">
