@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { TabPanel } from "react-tabs";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const SingleSubCategoy = ({ singleSub }) => {
   const navigate=useNavigate()
@@ -14,7 +15,12 @@ const SingleSubCategoy = ({ singleSub }) => {
         return navigate(`/singleToyDetails/${_id}`)
       }
       else{
-        alert('please login first ')
+        Swal.fire({
+          title: 'Success!',
+          text: 'Coffee Updated successfully',
+          icon: 'success',
+          confirmButtonText: 'Cool'
+      })
       }
   }
 
