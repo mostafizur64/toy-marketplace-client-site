@@ -39,7 +39,7 @@ const AllToys = () => {
                     {/* head */}
                     <thead>
                     <input onChange={(e) => setSearchText(e.target.value)} type="text" placeholder="search by name" />
-                                <button onClick={handleSearchToy}> Search</button>
+                                <button onClick={handleSearchToy}>Search</button>
                         <tr>
                             <th>Avatar</th>
                             <th>Seller Name</th>
