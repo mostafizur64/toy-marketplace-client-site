@@ -6,7 +6,7 @@ const Footer = () => {
           <footer className="footer p-10  text-base-content">
         <div>
         <Link to='/'> <img className="h-12 w-12 rounded-full " src="https://i.ibb.co/bQ4Sq00/46708d75d6ba97b6706acddb43f175d9.webp" alt="" />
-                    <a className="text-xl text-orange-500 ml-2">Animal toys</a></Link>
+                <a className="text-xl text-orange-500 ml-2">Animal toys</a></Link>
         </div> 
         <div>
           <span className="footer-title">Services</span> 
