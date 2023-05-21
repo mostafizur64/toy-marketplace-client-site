@@ -41,7 +41,6 @@ const AllToys = () => {
                     <input onChange={(e) => setSearchText(e.target.value)} type="text" placeholder="search by name" />
                                 <button onClick={handleSearchToy}> Search</button>
                         <tr>
-                            
                             <th>Avatar</th>
                             <th>Seller Name</th>
                             <th>Toy Name</th>
@@ -54,7 +53,7 @@ const AllToys = () => {
                     <tbody>
 
                         {
-                            allToys.map(allToy => <SingleAllToy key={allToy._id} allToy={allToy}></SingleAllToy>)
+                            allToys.slice(0,20).map(allToy => <SingleAllToy key={allToy._id} allToy={allToy}></SingleAllToy>)
 
                         }
 
