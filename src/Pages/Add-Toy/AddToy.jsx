@@ -48,7 +48,7 @@ const AddToy = () => {
                     confirmButtonText: 'Cool'
                 })
             }
-        })
+        });
     }
     return (
         <div>
