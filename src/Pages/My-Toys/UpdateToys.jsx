@@ -13,9 +13,7 @@ const {_id,price,rating,description,quantity} = toy
         const rating = form.rating.value;
         const quantity = form.quantity.value;
         const description = form.description.value;
-        const updateToys ={
-            price,rating,quantity,description
-        }
+        const updateToys ={  price,rating,quantity,description  }
         console.log(updateToys);
         //send data to the server
         fetch(`http://localhost:5000/myToys/${_id}`,{
