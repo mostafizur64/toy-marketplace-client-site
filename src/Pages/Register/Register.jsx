@@ -48,7 +48,7 @@ const {createUser} = useContext(AuthContext)
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="email" name="email" placeholder="email" className="input input-bordered" />
+                        <input type="email"  name="email" placeholder="email" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
