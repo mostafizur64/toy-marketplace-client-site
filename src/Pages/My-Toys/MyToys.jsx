@@ -56,7 +56,7 @@ const MyToys = () => {
                             Swal.fire(
                                 'Deleted!',
                                 'Your file has been deleted.',
-                                'success'
+                                'success',
                             )
                             // const remaining = myToys.filter(toy=>toy._id !==_id)
                             // setMyToys(remaining)
