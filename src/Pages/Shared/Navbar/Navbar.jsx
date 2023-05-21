@@ -20,7 +20,7 @@ const Navbar = () => {
         {
             user ?
                 <>  < li> <Link to='/addToy'>Add Toy</Link> </li>
-                    < li> <Link to='/login'>My Toys</Link> </li>
+                    < li> <Link to='/myToys'>My Toys</Link> </li>
 
                     <img className=' h-8 w-8  rounded-full mr-2 lg:mt-2' src={user.photoURL} title={user.displayName} alt="" />
 

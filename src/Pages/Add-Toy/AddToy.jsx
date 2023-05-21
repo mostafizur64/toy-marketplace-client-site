@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { data } from "autoprefixer";
-
+import Swal from "sweetalert2";
+import useTitle from "../../Hooks/useTitle";
 const AddToy = () => {
     const { user } = useContext(AuthContext)
-
-
+    useTitle('Add Toys')
     const handleAddToys = (event) => {
+
         event.preventDefault()
         const form = event.target;
         const name = user?.displayName;
@@ -40,17 +40,19 @@ const AddToy = () => {
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
-            if(data.insertedId > 0){
-                alert('Toy added successfully!')
-                form.reset();
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Toys Updated successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                })
             }
         })
     }
-
     return (
         <div>
             <form onSubmit={handleAddToys}>
-                <h2 className="text-3xl text-center">Book Service :</h2>
                 <div className="card-body">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="form-control">
@@ -118,5 +120,4 @@ const AddToy = () => {
         </div>
     );
 };
-
 export default AddToy;

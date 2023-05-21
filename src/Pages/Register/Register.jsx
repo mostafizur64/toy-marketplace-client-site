@@ -3,10 +3,11 @@ import img from '../../assets/images/login/login.svg';
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import useTitle from "../../Hooks/useTitle";
 
 
 const Register = () => {
-
+useTitle('Register')
 const {createUser} = useContext(AuthContext)
 
     const handleRegister = (event)=>{
@@ -41,7 +42,7 @@ const {createUser} = useContext(AuthContext)
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="name" name="name" placeholder="name" className="input input-bordered" />
+                        <input type="text" name="name" placeholder="name" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -53,7 +54,7 @@ const {createUser} = useContext(AuthContext)
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
-                        <input type="text" name="password" placeholder="password" className="input input-bordered" />
+                        <input type="password" name="password" placeholder="password" className="input input-bordered" />
                     
                     </div>
                     <div className="form-control">

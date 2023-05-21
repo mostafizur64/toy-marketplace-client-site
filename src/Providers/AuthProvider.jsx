@@ -15,20 +15,24 @@ const AuthProvider = ({ children }) => {
     return createUserWithEmailAndPassword(auth,email,password)
  }
  const signIn = (email,password) =>{
+    setLoading(true)
     return signInWithEmailAndPassword(auth,email,password);
 
  }
 const googleSignIn = ()=>{
+    setLoading(true)
     return signInWithPopup(auth,GoogleProvider)
 }
 
 const logOut = ()=>{
+    setLoading(true)
    return signOut(auth);
 
 }
 useEffect(()=>{
    const unsubscribe= onAuthStateChanged(auth,createUser=>{
         setUser(createUser);
+        setLoading(false)
         console.log('current user',createUser);
     })
     return unsubscribe()
