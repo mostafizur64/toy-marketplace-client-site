@@ -13,7 +13,7 @@ const AllToys = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                setAllToys(data)
+                setAllToys(data);
             })
     }, [searchText]);
     const handleSearchToy = () => {
