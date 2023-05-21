@@ -4,10 +4,7 @@ import { Link } from 'react-router-dom';
 const SingleMyToys = ({ myToy,handleDelete }) => {
     const { photo, _id, ToysName, price, quantity, rating } = myToy;
     return (
-
         <tr>
-
-
             <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
