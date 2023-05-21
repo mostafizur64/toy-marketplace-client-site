@@ -45,7 +45,7 @@ const AddToy = () => {
                     title: 'Success!',
                     text: 'Toys Updated successfully',
                     icon: 'success',
-                    confirmButtonText: 'Cool'
+                    confirmButtonText: 'Cool',
                 })
             }
         });
