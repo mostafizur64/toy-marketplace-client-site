@@ -80,7 +80,7 @@ const MyToys = () => {
         <div className="mt-4  border-2 mb-4 rounded-xl">
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
-                    {/* head */}
+                  
                     <thead>
                         <tr>
 
