@@ -7,22 +7,26 @@ const AllToys = () => {
     useTitle('All Toys')
     const [allToys, setAllToys] = useState([]);
     const [searchText, setSearchText] = useState('');
+    // const [data , setData]  =useState([])
  
     useEffect(() => {
         fetch('http://localhost:5000/alltoys')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setAllToys(data);
             })
-    }, [searchText]);
+    }, []);
+
     const handleSearchToy = () => {
         fetch(`http://localhost:5000/getToyName/${searchText}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+               
                 setAllToys(data)
             })
+           
 
             
 
@@ -34,11 +38,10 @@ const AllToys = () => {
                 <table className="table w-full">
                     {/* head */}
                     <thead>
-                        <tr>
-                            <th>
-                                <input onChange={(e) => setSearchText(e.target.value)} type="text" placeholder="search by name" />
+                    <input onChange={(e) => setSearchText(e.target.value)} type="text" placeholder="search by name" />
                                 <button onClick={handleSearchToy}> Search</button>
-                            </th>
+                        <tr>
+                            
                             <th>Avatar</th>
                             <th>Seller Name</th>
                             <th>Toy Name</th>

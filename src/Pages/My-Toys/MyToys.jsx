@@ -36,11 +36,6 @@ const MyToys = () => {
     }, [url, navigate])
 
 
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/services?search=${search}&sort=${asc ? 'asc' : 'desc'}`)
-    //         .then(res => res.json())
-    //         .then(data => setMyToys(data));
-    // }, [asc, search])
 
     const handleDelete = id => {
         Swal.fire({
@@ -75,12 +70,31 @@ const MyToys = () => {
 
 
     }
+    const hanadleAssending = () => {
+        fetch('http://localhost:5000/shortAssending')
+            .then(res => res.json())
+            .then(data => {
+                setMyToys(data)
+            })
+    }
+    const hanadleDesending = () => {
+        fetch('http://localhost:5000/shortDesending')
+            .then(res => res.json())
+            .then(data => {
+                setMyToys(data)
+            })
+    }
 
     return (
         <div className="mt-4  border-2 mb-4 rounded-xl">
             <div className="overflow-x-auto w-full">
+                <th>
+                    <button onClick={hanadleAssending} className="btn btn-sm btn-outline btn-secondary">assending</button>
+                    <button onClick={hanadleDesending} className="btn btn-sm btn-outline btn-secondary">Desending</button>
+                   
+                </th>
                 <table className="table w-full">
-                  
+
                     <thead>
                         <tr>
 
@@ -90,6 +104,7 @@ const MyToys = () => {
                             <th>Price</th>
                             <th>quantity</th>
                             <th>Aciton</th>
+
                         </tr>
                     </thead>
                     <tbody>
