@@ -20,8 +20,6 @@ const SingleAllToy = ({ allToy }) => {
     //   </div>
     // </div>
     <tr>
-
-
       <td>
         <div className="flex items-center space-x-3">
           <div className="avatar">
