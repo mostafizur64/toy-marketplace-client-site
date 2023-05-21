@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const SingleSubCategoy = ({ singleSub }) => {
   const navigate=useNavigate()
   const {user} = useContext(AuthContext)
-  const { _id,photo, ToysName, rating, price, CustomerName } = singleSub
+  const { _id,photo, ToysName, rating, price, } = singleSub
   console.log(singleSub);
 
   const handleViewDetails =()=>{
