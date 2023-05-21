@@ -8,7 +8,7 @@ const Blog = () => {
                 <div className="card-body">
                     <h2 className="card-title">What is an access token and refresh token? How do they work and where should we store them on the client-side? </h2>
                     <p>Refresh tokens allow you to balance your users' access needs with your organization's security practices. </p>
-                    
+                    <p>Modern web browsers support a number of ways for websites to store data on the user's computer — with the user's permission — then retrieve it when necessary. This lets you persist data for long-term storage, save sites or documents for offline use.</p>
                 </div>
             </div>
             <div className="card w-96 bg-base-100 shadow-xl w-[500px] h-[300px]">

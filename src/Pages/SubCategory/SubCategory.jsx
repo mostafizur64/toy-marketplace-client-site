@@ -40,7 +40,9 @@ const SubCategory = () => {
       <Tabs>
         <TabList className='text-center mt-4'>
           {
+         
             subCategorys?.slice(0,3).map(sub => <Tab onClick={() => setId(sub.Subcategory)} key={sub._id}>{sub.Subcategory}</Tab>)
+            
           }
           <hr />
         </TabList>
